@@ -1,0 +1,373 @@
+{
+  "meta": {
+    "format": "httpie",
+    "version": "1.0.0",
+    "contentType": "collection",
+    "schema": "https://schema.httpie.io/1.0.0.json",
+    "docs": "https://httpie.io/r/help/export-from-httpie",
+    "source": "HTTPie Desktop 2025.2.0"
+  },
+  "entry": {
+    "name": "Formeler- Public",
+    "icon": {
+      "name": "triangle",
+      "color": "green"
+    },
+    "auth": {
+      "type": "none"
+    },
+    "requests": [
+      {
+        "name": "SignIn",
+        "url": "https://formeler.com/api/sign-in",
+        "method": "POST",
+        "headers": [],
+        "queryParams": [
+          {
+            "name": "email",
+            "value": "test@example.com",
+            "enabled": false
+          }
+        ],
+        "pathParams": [],
+        "auth": {
+          "type": "inherited"
+        },
+        "body": {
+          "type": "form",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": [
+              {
+                "name": "email",
+                "value": "test@example.com",
+                "enabled": true,
+                "type": "text"
+              }
+            ]
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      },
+      {
+        "name": "Verify SignIn",
+        "url": "https://formeler.com/api/verify",
+        "method": "POST",
+        "headers": [],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "inherited"
+        },
+        "body": {
+          "type": "text",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "{\"email\": \"test@example.com\", \"code\": \"805993\"}",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": []
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      },
+      {
+        "name": "Request API Key",
+        "url": "https://formeler.com/api/add-apikey",
+        "method": "POST",
+        "headers": [
+          {
+            "name": "Authorization",
+            "value": "{{AUTH}}",
+            "enabled": true
+          }
+        ],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "inherited"
+        },
+        "body": {
+          "type": "form",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": [
+              {
+                "name": "name",
+                "value": "Test",
+                "enabled": true,
+                "type": "text"
+              }
+            ]
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      },
+      {
+        "name": "Revoke API Key",
+        "url": "https://formeler.com/api/revoke-apikey",
+        "method": "POST",
+        "headers": [
+          {
+            "name": "Authorization",
+            "value": "{{AUTH}}",
+            "enabled": true
+          }
+        ],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "inherited"
+        },
+        "body": {
+          "type": "form",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": [
+              {
+                "name": "name",
+                "value": "Test",
+                "enabled": true,
+                "type": "text"
+              }
+            ]
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      },
+      {
+        "name": "Usage",
+        "url": "https://formeler.com/api/usage",
+        "method": "GET",
+        "headers": [
+          {
+            "name": "Authorization",
+            "value": "{{AUTH}}",
+            "enabled": true
+          }
+        ],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "inherited"
+        },
+        "body": {
+          "type": "form",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": []
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      },
+      {
+        "name": "Update Configs",
+        "url": "https://formeler.com/api/update-configs",
+        "method": "POST",
+        "headers": [
+          {
+            "name": "Authorization",
+            "value": "{{AUTH}}",
+            "enabled": true
+          }
+        ],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "inherited"
+        },
+        "body": {
+          "type": "text",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "{\n  \"credit_ended\": true,\n  \"daily_usage_spike_25\": false,\n  \"daily_usage_spike_50\": true,\n  \"service_incident\": false\n}",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": []
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      },
+      {
+        "name": "Detect",
+        "url": "https://formeler.com/api/2025-11-12/langid/detect",
+        "method": "POST",
+        "headers": [
+          {
+            "name": "Authorization",
+            "value": "{{APIKEY}}",
+            "enabled": true
+          }
+        ],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "inherited"
+        },
+        "body": {
+          "type": "form",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": [
+              {
+                "name": "text",
+                "value": "Mi comida favorita es una enchilada.",
+                "enabled": true,
+                "type": "text"
+              }
+            ]
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      },
+      {
+        "name": "Detect",
+        "url": "https://formeler.com/api/2025-11-12/langid/detect",
+        "method": "POST",
+        "headers": [
+          {
+            "name": "Authorization",
+            "value": "{{APIKEY}}",
+            "enabled": true
+          }
+        ],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "inherited"
+        },
+        "body": {
+          "type": "text",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "{\"text\": \"Dies ist ein Test\"}",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": [
+              {
+                "name": "text",
+                "value": "This is a Test",
+                "enabled": true,
+                "type": "text"
+              }
+            ]
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      },
+      {
+        "name": "Batch Detect",
+        "url": "https://formeler.com/api/2025-11-12/langid/batch-detect",
+        "method": "POST",
+        "headers": [
+          {
+            "name": "Authorization",
+            "value": "{{APIKEY}}",
+            "enabled": true
+          }
+        ],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "inherited"
+        },
+        "body": {
+          "type": "text",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "{\"texts\": [\"This is a test.\", \"Dies ist ein Test\"]}",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": [
+              {
+                "name": "text",
+                "value": "This is a Test",
+                "enabled": true,
+                "type": "text"
+              }
+            ]
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      }
+    ]
+  }
+}

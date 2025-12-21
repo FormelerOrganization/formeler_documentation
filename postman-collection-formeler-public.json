@@ -1,0 +1,257 @@
+{
+  "info": {
+    "_postman_id": "1766309798051674040",
+    "name": "Formeler- Public",
+    "description": "",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Formeler- Public",
+      "item": [
+        {
+          "name": "SignIn",
+          "request": {
+            "method": "POST",
+            "url": {
+              "raw": "https://formeler.com/api/sign-in",
+              "host": [
+                "https://formeler.com"
+              ],
+              "path": [
+                "api",
+                "sign-in"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Verify SignIn",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"email\": \"test@example.com\", \"code\": \"805993\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://formeler.com/api/verify",
+              "host": [
+                "https://formeler.com"
+              ],
+              "path": [
+                "api",
+                "verify"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Request API Key",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{AUTH}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://formeler.com/api/add-apikey",
+              "host": [
+                "https://formeler.com"
+              ],
+              "path": [
+                "api",
+                "add-apikey"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Revoke API Key",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{AUTH}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://formeler.com/api/revoke-apikey",
+              "host": [
+                "https://formeler.com"
+              ],
+              "path": [
+                "api",
+                "revoke-apikey"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Usage",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{AUTH}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://formeler.com/api/usage",
+              "host": [
+                "https://formeler.com"
+              ],
+              "path": [
+                "api",
+                "usage"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Update Configs",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{AUTH}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"credit_ended\": true,\n  \"daily_usage_spike_25\": false,\n  \"daily_usage_spike_50\": true,\n  \"service_incident\": false\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://formeler.com/api/update-configs",
+              "host": [
+                "https://formeler.com"
+              ],
+              "path": [
+                "api",
+                "update-configs"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Detect",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{APIKEY}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"text\": \"Dies ist ein Test\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://formeler.com/api/2025-11-12/langid/detect",
+              "host": [
+                "https://formeler.com"
+              ],
+              "path": [
+                "api",
+                "2025-11-12",
+                "langid",
+                "detect"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Batch Detect",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{APIKEY}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"texts\": [\"This is a test.\", \"Dies ist ein Test\"]}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://formeler.com/api/2025-11-12/langid/batch-detect",
+              "host": [
+                "https://formeler.com"
+              ],
+              "path": [
+                "api",
+                "2025-11-12",
+                "langid",
+                "batch-detect"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "id": "52a6976e-8087-407a-b57f-16256d9dc6cc",
+      "key": "AUTH",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "id": "6f7c593c-5f8f-48bc-b999-5208cf3e7eed",
+      "key": "APIKEY",
+      "value": "",
+      "type": "string"
+    }
+  ]
+}
